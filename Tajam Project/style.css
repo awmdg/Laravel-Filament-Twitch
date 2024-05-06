@@ -1,0 +1,636 @@
+@font-face {
+  font-family: "Playfair Display", serif;
+  src: url("https://fonts.gstatic.com/s/playfairdisplay/v23/nuFiD-vYSZviVYUb_rj3ij__anPXDTNwnDpbjUQDg1c.woff2")
+    format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+p,
+.card-text {
+  font-size: 16px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 50px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: #ffffffa6 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #212121;
+  transition: background-color 0.3s ease;
+}
+
+/* CSS for the links when the navigation bar is scrolled */
+.navbar.scrolled .navbar-nav .nav-link {
+  color: #212121 !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  padding-right: 25px;
+}
+
+.navbar.scrolled .navbar-nav .nav-link {
+  color: #212121 !important;
+}
+
+.navbar.scrolled .navbar-nav .nav-link.active,
+.navbar.scrolled .navbar-nav .nav-link:hover {
+  color: #00e0d0 !important;
+}
+
+.navbar-logo {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+#banner {
+  position: relative;
+  background-image: url(/Assets/PUT\ YOUR\ IMAGE\ HERE.png);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #30235f;
+  background-blend-mode: overlay;
+}
+
+#banner h1 {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+#banner p {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.circle-container {
+  position: relative;
+  height: 50px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.circle.active {
+  border: none;
+  background-color: #00e0d0;
+}
+
+.bottom-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+hr {
+  color: #00e0d0;
+  border: 2px;
+}
+
+.button-banner {
+  border: 2px solid #00e0d0;
+  color: #00e0d0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 7px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.button-banner:hover {
+  color: #fff;
+  background-color: #00e0d0;
+  transition: 0.2s ease-in-out;
+}
+
+#story {
+  padding: 5rem;
+}
+
+#story h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #413d4b;
+  font-size: 22px;
+}
+
+#story p {
+  font-family: "Roboto", sans-serif;
+  color: #413d4b;
+  font-size: 14px;
+}
+
+#play-section {
+  position: relative;
+  background-image: url(/Assets/bg-city.png);
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #30235f;
+  background-blend-mode: overlay;
+}
+
+#play-section p {
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  border-radius: 0;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card p {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #474747;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+#expertise h1 {
+  font-family: "Playfair Display", serif;
+  color: #413d4b;
+  font-weight: 700;
+}
+
+#expertise p {
+  color: #474747;
+  font-size: 14px;
+}
+
+#team {
+  position: relative;
+  height: auto;
+  background-image: url(/Assets/PUT\ YOUR\ IMAGE\ HERE.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #30235f;
+  background-blend-mode: overlay;
+}
+
+.team-card {
+  align-items: center;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card .card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team-card .card-body {
+  padding: 1.25rem;
+}
+
+.team-card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.team-card .card-text {
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+#team-text {
+  border: 0.02rem solid #e1e1e1;
+}
+
+#team-text .name {
+  font-weight: bolder;
+  margin-top: 3px;
+  color: #fff;
+  font-size: 17px;
+}
+
+#team-text .position {
+  font-weight: lighter;
+  margin-top: 3px;
+  color: #fff;
+  font-size: 14px;
+}
+
+#testimonials {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #30235f;
+  background-image: url(/Assets/PUT\ YOUR\ IMAGE\ HERE.png);
+  background-blend-mode: overlay;
+}
+
+#testimonials h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.carousel-inner img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.carousel-inner .active img {
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-container {
+  max-width: 600px;
+}
+
+.carousel-inner img {
+  display: block;
+  margin: 0 auto;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.client-logo img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  /* color: #30235f; */
+}
+
+#contact .form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+}
+
+/* #contact .button-banner {
+  background-color: #30235f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+#contact .button-banner:hover {
+  background-color: #00e0d0;
+}
+
+#contact .img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#footer {
+  position: relative;
+  background-image: url(/Assets/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #30235f;
+  background-blend-mode: overlay;
+}
+
+#footer {
+  font-family: "Roboto", sans-serif;
+}
+
+#footer a,
+#footer p,
+#footer h3,
+#footer span,
+#footer form input,
+#footer button {
+  font-family: "Roboto", sans-serif;
+}
+
+#footer .custom-link {
+  text-decoration: none;
+  color: white;
+}
+
+.social-icon {
+  font-size: 2rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 767px) {
+  .navbar {
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar-collapse.active {
+    background-color: #fff;
+  }
+
+  .navbar.scrolled {
+    background-color: #212121cc !important;
+    transition: background-color 0.3s ease;
+    color: #fff;
+  }
+
+  .navbar-collapse .nav-link:hover {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.1
+    ); /* Adjust the background color as needed */
+  }
+
+  .navbar-logo {
+    max-width: 80px;
+    color: red;
+    margin-right: 800px;
+  }
+
+  .navbar-brand {
+    order: 1;
+  }
+
+  .navbar-toggler {
+    order: 3;
+    color: #212121;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 10px 0;
+  }
+
+  .navbar-collapse .nav-link {
+    padding-right: 0;
+    padding-left: 15px;
+    color: #212121;
+  }
+
+  .navbar-collapse {
+    order: 2;
+  }
+
+  .navbar.scrolled {
+    background-color: #ffffff !important;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    height: 100px;
+  }
+
+  .navbar-nav .nav-link {
+    padding-right: 10px;
+  }
+
+  #banner {
+    padding: 2rem;
+  }
+
+  #banner h1 {
+    font-size: 30px;
+  }
+
+  #banner p {
+    font-size: 12px;
+  }
+
+  .circle-container {
+    height: 20px;
+  }
+
+  .circle {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    margin-bottom: 5rem;
+  }
+
+  #story {
+    padding: 2rem;
+  }
+
+  hr {
+    border-width: 1px;
+  }
+
+  .button-banner {
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  #story {
+    padding: 1rem;
+  }
+
+  .story-img {
+    max-width: 200px;
+    margin-bottom: 2rem;
+  }
+
+  #story h2 {
+    font-size: 22px;
+  }
+
+  #story p {
+    font-size: 12px;
+  }
+
+  #play-section {
+    height: 50vh;
+  }
+
+  #play-section p {
+    margin-top: 5px;
+  }
+
+  .card h2 {
+    font-size: 14px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  #expertise h1 {
+    font-size: 16px;
+  }
+
+  #expertise p {
+    font-size: 12px;
+  }
+
+  #logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  #team {
+    padding: 1rem;
+  }
+
+  #team-text .name {
+    font-size: 12px;
+  }
+
+  #team-text .position {
+    font-size: 10px;
+  }
+
+  #testimonials h2 {
+    font-size: 3rem;
+  }
+
+  .testomonial-author h5 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+  }
+
+  .testomonial-position h6 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .carousel-inner img {
+    width: 8px;
+    height: 8px;
+    margin-right: 2px;
+  }
+
+  .carousel-inner .active img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .client-logo img {
+    max-width: 150px;
+  }
+
+  #footer {
+    height: auto;
+    padding: 40px 20px;
+    text-align: left;
+  }
+
+  #footer .logo-text {
+    font-family: "Roboto", sans-serif;
+    color: aquamarine;
+    letter-spacing: 6px;
+    font-weight: 100;
+    font-size: 25px;
+  }
+
+  #footer .navbar-logo {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: left;
+  }
+}
